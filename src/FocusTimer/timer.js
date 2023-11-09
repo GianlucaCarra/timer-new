@@ -12,6 +12,8 @@ export function updateDisplay(minutes, seconds) {
 }
 
 export function countdown() {
+  clearTimeout(state.countdouwn)
+
   if(state.isRunnig === false) {
     return;
   }
@@ -33,6 +35,6 @@ export function countdown() {
     return;
   }
 
-  updateDisplay(minutes, seconds)
-  setTimeout(() => countdown(), 1000)
+  updateDisplay(minutes, seconds);
+  state.countdouwn = setTimeout(() => countdown(), 1000);
 }
