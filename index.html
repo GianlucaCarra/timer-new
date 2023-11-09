@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Metas -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+
+    <!-- Title -->
+    <title>Focus Timer</title>
+
+    <!-- Links -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+
+    <!-- Scripts -->
+    <script type="module" src="./src/main.js" defer></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <main class="flex">
+      <section id="timer">
+        <div id="time">
+          <span id="minutes">00</span>
+          <span>:</span>
+          <span id="seconds">00</span>
+        </div>
+
+        <div id="controls" class="flex">
+          <button class="ph ph-bold ph-play-circle" id="play" data-action="playTimer">
+            <span class="sr-only">Play</span>
+          </button>
+          <button class="ph ph-bold ph-pause-circle hide" id="pause" data-action="pauseTimer">
+            <spana class="sr-only">Pause</span>
+          </button>
+          <button class="ph ph-bold ph-stop-circle" data-action="reset">
+            <span class="sr-only">Resetar</span>
+          </button>
+          <button class="ph ph-bold ph-plus-circle" data-action="add">
+            <span class="sr-only">Adicionar cinco minutos</span>
+          </button>
+          <button class="ph ph-bold ph-minus-circle" data-action="remove">
+            <span class="sr-only">Remover cinco minutos</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="soundbar">
+        <button id="park" class="ph ph-tree sound" data-action="toggleSound" data-sound="park">
+          <span class="sr-only">Som ambiente de floresta</span>
+        </button>
+        <button id="rain" class="ph ph-cloud-rain sound" data-action="toggleSound" data-sound="rain">
+          <span class="sr-only">Som ambiente de chuva</span>
+        </button>
+        <button id="coffe" class="ph ph-storefront sound" data-action="toggleSound" data-sound="coffe">
+          <span class="sr-only">Som ambiente de cafeteria</span>
+        </button>
+        <button id="fireplace" class="ph ph-flame sound" data-action="toggleSound" data-sound="fireplace">
+          <span class="sr-only">Som ambiente de fogueira</span>
+        </button>
+      </section>
+    </main>
+  </body>
+</html>

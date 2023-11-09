@@ -1,0 +1,149 @@
+/* ROOT */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-color: hsl(0, 0%, 90%);
+  --font-color: hsl(240, 6%, 21%);
+  --soundbar-button-color: hsl(240, 9%, 89%);
+  --soundbar-focus-color: hsl(194, 97%, 31%);
+  --font-color-button-focus: hsl(0, 0%, 100%);
+}
+
+/* Utilities classes */
+.hide {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+
+  width: 1px;
+  height: 1px;
+
+  margin: -1px;
+  padding: 0px;
+  appearance: none;
+}
+
+/* Page */
+body {
+background-color: var(--bg-color);
+
+  font-size: 1.6rem;
+  display: grid;
+  place-content: center;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+main {
+  flex-direction: column;
+  align-items: center;
+  gap: 9.6rem;
+}
+
+#timer {
+  margin-bottom: 1.7rem;
+}
+
+span {
+  color: var(--font-color);
+
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#controls {
+  justify-content: center;
+  gap: 4rem;
+}
+
+#controls button {
+  background-color: transparent;
+
+  border: none;
+  
+  font-size: 4.8rem;
+  color: var(--font-color);
+
+  cursor: pointer;
+}
+
+#soundbar {
+  display: grid;
+  grid-template-areas: 
+  "A B"
+  "C D";
+  gap: 3.2rem;
+}
+
+#soundbar button {
+  background-color: var(--soundbar-button-color);
+
+  width: 13.8rem;
+  height: 15.2rem;
+
+  border: none;
+  border-radius: 2.4rem;
+
+  color: var(--font-color);
+  font-size: 5.6rem;
+
+  cursor: pointer;
+}
+
+#soundbar button.is-selected {
+  background-color: var(--soundbar-focus-color);
+
+  color: var(--font-color-button-focus);
+}
+
+#park {
+  grid-area: A;
+}
+
+#rain {
+  grid-area: B;
+}
+
+#coffe { 
+  grid-area: C;
+}
+
+#fireplace {
+  grid-area: D;
+}
+
+.is-selected {
+  transition: background-color .3s, color .6s;
+}
+
+.sound {
+  transition: background-color .3s, color .6s;
+}
+
+/* at rules */
+
+@media (min-width: 1000px) {
+  main {
+    flex-direction: row;
+    gap: 19.2rem;
+  }
+}
+
